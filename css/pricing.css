@@ -1,5 +1,5 @@
 .pricing-hero {
-    padding: 180px 0 100px;
+    padding: 180px 0 160px;
     background: radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%);
     text-align: center;
 }
@@ -158,5 +158,84 @@
     
     .pricing-price {
         font-size: 36px;
+    }
+}
+
+/* Additional responsive improvements specifically for the pricing cards */
+@media (max-width: 992px) {
+    .pricing-cards {
+        gap: 22px;
+    }
+
+    .pricing-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Make cards stack and reduce paddings to avoid overflow */
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .pricing-card {
+        padding: 20px;
+        border-radius: 12px;
+        text-align: left;
+    }
+
+    .pricing-card .pricing-header {
+        text-align: left;
+    }
+
+    .pricing-header .pricing-price {
+        font-size: 36px;
+    }
+
+    .pricing-hero {
+        padding: 100px 0 100px;
+    }
+
+    .pricing-hero p {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    /* Reposition the "MOST POPULAR" badge so it doesn't create horizontal overflow */
+    .pricing-card.popular::before {
+        right: 12px;
+        top: 12px;
+        padding: 4px 14px;
+        transform: rotate(30deg);
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-hero {
+        padding: 70px 0 80px;
+    }
+
+    .pricing-hero h1 {
+        font-size: 28px;
+    }
+
+    .pricing-price {
+        font-size: 28px;
+    }
+
+    .pricing-card {
+        padding: 14px;
+    }
+
+    .pricing-card.popular::before {
+        /* hide the ribbon on very small screens to avoid overflow */
+        display: none;
+    }
+
+    .pricing-features li {
+        padding: 8px 0;
+        font-size: 14px;
     }
 }

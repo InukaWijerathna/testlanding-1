@@ -89,6 +89,118 @@ textarea.form-control {
     resize: vertical;
 }
 
+/* Ensure select dropdowns use readable background and text colors */
+.contact-form select.form-control {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+}
+
+.contact-form select.form-control option {
+    background: var(--secondary);
+    color: var(--text);
+}
+
+/* Custom select: hide native select but keep it in DOM for form submit */
+.native-select {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+}
+
+/* Custom select styles */
+.custom-select-wrapper {
+    position: relative;
+}
+.custom-select {
+    position: relative;
+}
+.custom-select-trigger {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    /* match the appearance of other form controls */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text);
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* placeholder vs selected states for the trigger */
+.custom-select-trigger.placeholder {
+    color: var(--text-light);
+}
+.custom-select-trigger.selected {
+    color: var(--text);
+}
+/* Ensure input/textarea placeholders match the custom select placeholder color */
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+    color: var(--text-light);
+    opacity: 1;
+}
+
+/* Vendor-prefixed fallbacks */
+input.form-control::-webkit-input-placeholder,
+textarea.form-control::-webkit-input-placeholder {
+    color: var(--text-light);
+}
+input.form-control::-moz-placeholder,
+textarea.form-control::-moz-placeholder {
+    color: var(--text-light);
+}
+input.form-control:-ms-input-placeholder,
+textarea.form-control:-ms-input-placeholder {
+    color: var(--text-light);
+}
+.custom-options {
+    display: none; /* hidden by default */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 8px);
+    background: var(--secondary); /* solid background to avoid transparency */
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: none;
+    transition: border-color 0.3s;
+    border-radius: 8px;
+    max-height: 260px;
+    overflow: auto;
+    z-index: 1200;
+}
+.custom-select.open .custom-options {
+    display: block;
+}
+.custom-select.open .custom-select-trigger {
+    box-shadow: none;
+    border-color: var(--accent);
+}
+.custom-select-trigger:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: none;
+}
+.custom-option {
+    padding: 12px 14px;
+    cursor: pointer;
+    color: var(--text);
+    white-space: normal;
+}
+.custom-option:hover {
+    background: rgba(0,0,0,0.15);
+    color: var(--white);
+}
+.custom-option[aria-selected="true"] {
+    background: rgba(0,0,0,0.2);
+}
+
 /* Map Section */
 .map-section {
     padding: 100px 0;
@@ -98,20 +210,24 @@ textarea.form-control {
     background: var(--card-bg);
     border-radius: 15px;
     padding: 40px;
-    text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    display: grid;
+    grid-template-columns: 1fr; /* single column since details were removed */
+    gap: 30px;
+    align-items: start;
 }
 
 .map-placeholder {
     width: 100%;
-    height: 300px;
-    background: var(--secondary);
+    height: 360px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.02)), var(--secondary);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
 }
 
 .map-placeholder i {
@@ -128,6 +244,11 @@ textarea.form-control {
     .contact-content {
         flex-direction: column;
     }
+
+    .map-container {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -137,5 +258,60 @@ textarea.form-control {
     
     .map-container {
         padding: 20px;
+    }
+}
+
+/* Map right content styles */
+.map-right h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.map-right p {
+    color: var(--text-light);
+    margin-bottom: 18px;
+}
+
+.office-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.office-details .detail {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.office-details .detail i {
+    font-size: 20px;
+    color: var(--accent);
+    min-width: 26px;
+}
+
+.office-details .detail h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.map-right .cta-button {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+    .map-placeholder {
+        height: 220px;
+    }
+
+    .map-container {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .map-right h2 {
+        font-size: 22px;
     }
 }

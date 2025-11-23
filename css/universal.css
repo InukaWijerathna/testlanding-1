@@ -258,3 +258,91 @@ footer {
         font-size: 28px;
     }
 }
+
+/* Additional responsive improvements */
+@media (max-width: 1024px) {
+    .container {
+        width: 94%;
+    }
+
+    .navbar {
+        padding: 14px 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .cta-button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reduce section paddings so content fits on small screens */
+    section {
+        padding: 90px 0 50px;
+    }
+
+    /* Stack navbar content and make nav full-width */
+    .navbar {
+        align-items: center;
+    }
+
+    /* Hide only the header CTA button to avoid layout overflow; keep page CTAs visible */
+    header .cta-button {
+        display: none;
+    }
+
+    /* Make dashboard and preview scale nicely */
+    .dashboard-preview {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    /* Make images and media scale */
+    img, .about-image img, .hero-image img, .dashboard-preview img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Improve spacing for footer on small screens */
+    .footer-content {
+        gap: 20px;
+    }
+
+    /* Ensure the fixed header doesn't overlap content too much on phones */
+    header {
+        position: fixed;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title h2 {
+        font-size: 22px;
+    }
+
+    .hero h1, .about-hero h1, .features-hero h1, .pricing-hero h1, .contact-hero h1 {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .mobile-menu {
+        font-size: 22px;
+    }
+}
