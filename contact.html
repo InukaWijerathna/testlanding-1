@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Techzaz EDR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/universal.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/edr-logo.svg" alt="Techzaz Logo">                 
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="contact.html" class="cta-button">Request Demo</a>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact <span>Our Team</span></h1>
+            <p>Get in touch with our cybersecurity experts for questions, demos, or support.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone Number</h3>
+                        <p>+974 3994 9696</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Address</h3>
+                        <p>info@techzaz.lk</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Website</h3>
+                        <p>www.techzaz.lk</p>
+                    </div>
+                    <!-- Business Hours removed to reduce vertical clutter -->
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-select-wrapper">
+                                <!-- keep native select for form submission, hide it visually -->
+                                <select class="form-control native-select" required>
+                                    <option value="" disabled selected hidden>Select Inquiry Type</option>
+                                    <option value="sales">Sales Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="demo">Request Demo</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="custom-select" aria-hidden="true">
+                                    <button type="button" class="custom-select-trigger">Select Inquiry Type</button>
+                                    <div class="custom-options" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <div class="map-left">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Interactive Map Location</p>
+                        <small>476/2 Rajasinghe Mawatha, Hunupitiya, Wattala</small>
+                    </div>
+                </div>
+                <!-- Right-side office details removed as requested -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Techzaz EDR</h3>
+                    <p>Advanced Endpoint Detection and Response platform for modern cybersecurity threats.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Endpoint Protection</a></li>
+                        <li><a href="#">Threat Intelligence</a></li>
+                        <li><a href="#">Incident Response</a></li>
+                        <li><a href="#">Security Analytics</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Techzaz Networks (Pvt) Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form handling + custom select init
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const name = contactForm.querySelector('input[type="text"]').value;
+                    const email = contactForm.querySelector('input[type="email"]').value;
+                    
+                    // Simulate form submission
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+                    
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    setTimeout(() => {
+                        alert(`Thank you, ${name}! Your message has been sent successfully. We'll get back to you at ${email} soon.`);
+                        contactForm.reset();
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    }, 2000);
+                });
+            }
+
+            // Initialize custom select UI (keeps native select hidden for submission)
+            (function initCustomSelects(){
+                const wrappers = document.querySelectorAll('.custom-select-wrapper');
+                wrappers.forEach(wrapper => {
+                    const native = wrapper.querySelector('select.native-select');
+                    const custom = wrapper.querySelector('.custom-select');
+                    const trigger = wrapper.querySelector('.custom-select-trigger');
+                    const optionsContainer = wrapper.querySelector('.custom-options');
+
+                    if (!native || !custom || !trigger || !optionsContainer) return;
+
+                    // build options (skip disabled placeholder entirely)
+                    optionsContainer.innerHTML = '';
+                    Array.from(native.options).forEach(opt => {
+                        if (opt.disabled) return; // never include disabled placeholder in dropdown
+                        const div = document.createElement('div');
+                        div.className = 'custom-option';
+                        div.textContent = opt.textContent;
+                        div.dataset.value = opt.value;
+                        if (opt.selected && opt.value !== '') div.setAttribute('aria-selected','true');
+                        optionsContainer.appendChild(div);
+                    });
+
+                    // set initial trigger label
+                    function updateTrigger(){
+                        const sel = native.options[native.selectedIndex];
+                        if (sel && sel.value !== '') {
+                            trigger.textContent = sel.textContent;
+                            trigger.classList.remove('placeholder');
+                            trigger.classList.add('selected');
+                        } else {
+                            const placeholder = native.querySelector('option[disabled]');
+                            trigger.textContent = placeholder ? placeholder.textContent : 'Select';
+                            trigger.classList.remove('selected');
+                            trigger.classList.add('placeholder');
+                        }
+                    }
+
+                    updateTrigger();
+
+                    // ensure closed by default
+                    custom.classList.remove('open');
+                    optionsContainer.setAttribute('aria-hidden','true');
+
+                    // toggle
+                    trigger.addEventListener('click', function(e){
+                        e.stopPropagation();
+                        const isOpen = custom.classList.toggle('open');
+                        optionsContainer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+                        // close other open selects
+                        document.querySelectorAll('.custom-select.open').forEach(other => {
+                            if (other !== custom) {
+                                other.classList.remove('open');
+                                const oc = other.querySelector('.custom-options');
+                                if (oc) oc.setAttribute('aria-hidden','true');
+                            }
+                        });
+                    });
+
+                    // option click
+                    optionsContainer.addEventListener('click', function(e){
+                        const opt = e.target.closest('.custom-option');
+                        if (!opt) return;
+                        const value = opt.dataset.value;
+                        native.value = value;
+                        native.dispatchEvent(new Event('change', { bubbles: true }));
+                        // mark selection
+                        Array.from(optionsContainer.children).forEach(c => c.removeAttribute('aria-selected'));
+                        opt.setAttribute('aria-selected','true');
+                        updateTrigger();
+                        custom.classList.remove('open');
+                        optionsContainer.setAttribute('aria-hidden','true');
+                    });
+
+                    // close on outside click
+                    document.addEventListener('click', function(){
+                        if (custom.classList.contains('open')){
+                            custom.classList.remove('open');
+                            optionsContainer.setAttribute('aria-hidden','true');
+                        }
+                    });
+
+                    // sync programmatic changes
+                    native.addEventListener('change', updateTrigger);
+                });
+            })();
+        });
+    </script>
+</body>
+</html>

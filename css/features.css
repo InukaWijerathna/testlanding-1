@@ -1,0 +1,228 @@
+.features {
+    background: var(--secondary);
+    padding: 0 0 40px;
+}
+
+/* Section title for feature list */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    padding: 28px 0 24px; /* increased bottom spacing */
+    margin: 0 auto 8px;
+    letter-spacing: 0.4px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 22px;
+        padding: 20px 0 10px;
+    }
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Compact preview block placed under the hero to use empty space */
+.features-preview {
+    padding: 22px 0 72px; /* extra space below preview cards */
+}
+
+.preview-title h3 {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.preview-title p {
+    color: var(--text-light);
+    text-align: center;
+    margin: 8px 0 14px;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 6px;
+    margin-bottom: 40px; /* ensure clear separation from following content */
+}
+
+.preview-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.preview-card i {
+    font-size: 26px;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.preview-card h4 {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.preview-card p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .features-preview {
+        padding: 20px 0 44px; /* extra mobile spacing below preview */
+    }
+
+    .preview-grid {
+        gap: 12px;
+    }
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--glow);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon i {
+    font-size: 30px;
+    color: var(--primary);
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+}
+
+.feature-highlight {
+    background: var(--gradient);
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Features Hero */
+.features-hero {
+    padding: 140px 0 60px;
+    background: radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%);
+    text-align: center;
+}
+
+.features-hero h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.features-hero p {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.features-hero span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 768px) {
+    .features-hero h1 {
+        font-size: 36px;
+    }
+}
+
+/* Improved responsiveness for features grid and cards */
+@media (max-width: 992px) {
+    .features-hero {
+        padding: 80px 0 32px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-hero {
+        padding: 60px 0 24px;
+    }
+
+    /* Stack into a single column on small screens */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 18px;
+        transition: none;
+    }
+
+    /* Disable hover transform on touch devices to avoid layout shifts */
+    .feature-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 14px;
+    }
+
+    .feature-icon i {
+        font-size: 26px;
+    }
+
+    .feature-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+    }
+}

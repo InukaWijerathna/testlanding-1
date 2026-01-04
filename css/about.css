@@ -1,0 +1,403 @@
+.about-hero {
+    padding: 140px 0 60px; /* reduced bottom padding to use space more efficiently */
+    background: radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%);
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-hero span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Dashboard Preview Styles for About Page */
+.dashboard-preview {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--glow);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-header {
+    height: 40px;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.dashboard-window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.control.close {
+    background: #ff5f57;
+}
+
+.control.minimize {
+    background: #ffbd2e;
+}
+
+.control.maximize {
+    background: #28ca42;
+}
+
+.dashboard-content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    height: calc(100% - 40px);
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.card-small {
+    grid-column: span 1;
+}
+
+.card-large {
+    grid-column: span 2;
+}
+
+.card-title {
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.card-data {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .dashboard-preview {
+        height: 250px;
+    }
+}
+
+/* Compact features strip under the hero to occupy empty space */
+.about-features {
+    padding: 22px 0 36px;
+}
+
+.features-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.feature-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.feature-item i {
+    font-size: 26px;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.feature-item h4 {
+    margin: 6px 0 8px;
+    font-size: 16px;
+}
+
+.feature-item p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 110px 0 48px;
+    }
+
+    .about-features {
+        padding: 18px 0 24px;
+    }
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+/* Center the preview container within the image column */
+.about-image {
+    display: flex;
+    justify-content: flex-end; /* nudge preview slightly to the right */
+    align-items: center;
+    padding-left: 24px; /* small inward offset so it doesn't touch the column edge */
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Mission Section */
+.mission {
+    background: var(--secondary);
+    padding: 100px 0;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mission-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border-radius: 15px;
+    padding: 36px 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mission-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.mission-icon i {
+    font-size: 30px;
+    color: var(--primary);
+}
+
+.mission-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--white);
+}
+
+.mission-card p {
+    color: var(--text-light);
+    opacity: 0.95;
+}
+
+.mission-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55), var(--glow);
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    color: var(--primary);
+}
+
+.team-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.team-role {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-card p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 36px;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+}
+
+/* Additional responsive tweaks for about page containers */
+@media (max-width: 992px) {
+    .about-content {
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .dashboard-preview {
+        max-width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        gap: 18px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dashboard-preview {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about-hero {
+        padding: 120px 0 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+    .about-content {
+        padding: 0 10px;
+    }
+
+    .dashboard-preview {
+        padding: 8px;
+    }
+
+    .about-stats {
+        gap: 10px;
+    }
+}
